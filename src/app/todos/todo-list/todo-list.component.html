@@ -1,0 +1,25 @@
+
+
+        <table  class="table table-bordered table-dark table-responsive">
+            <thead style="max-height: 30px;">
+                <tr>
+                    <th *ngFor="let col of cols">{{col.name}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let todo of list">
+                    <td>{{todo.Name}}</td>
+                    <td>{{todo.Description}}</td>
+                    <td>{{todo.LastModifiedAt | date:'short'}}</td>
+                    <td>
+                        <i style="cursor: pointer;" (click)="deleteTask(todo.Id)" class="bi bi-trash-fill"></i>
+                        
+                    </td>
+                </tr>
+                <tr *ngIf="list.length == 0">
+                    <td align="center" colspan="4">No Data found</td>
+                </tr>
+            </tbody>
+        </table>
+        
+ 

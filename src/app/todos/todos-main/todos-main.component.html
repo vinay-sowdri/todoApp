@@ -1,0 +1,7 @@
+<div class="p-5 text-center">
+    <h1 class="mb-3">Todo List</h1>
+</div>
+<div class="text-center">
+    <app-todo-item [editTodo]="todoTobeEditd"></app-todo-item>
+    <app-todo-list (deleteTodo)="deleteTodo($event)" [list]="todoList" ></app-todo-list>
+</div>

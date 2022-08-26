@@ -1,0 +1,14 @@
+
+<form class="offset-lg-4" novalidate #form="ngForm" (ngSubmit)="onAdd(form)" autocomplete="off">
+    <div class="form-group col-6">
+        <label for="name">Task Name</label>
+        <input class="form-control" id="name" type="text" required [maxLength]="maxlength" [(ngModel)]="todo.Name" name="Name">
+    </div>
+    <div class="form-group col-6">
+        <label for="Description">Task Description</label>
+        <textarea class="form-control" id="Description" style="resize: none;" maxlength="100" cols="20" rows="4" required [(ngModel)]="todo.Description" name="Description"></textarea>
+    </div>
+    <span class="form-group col-6">
+        <button class="btn btn-default btn-primary" [disabled]="form.invalid">Add</button>
+    </span>
+</form>
